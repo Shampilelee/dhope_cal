@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.calculator_grid {
+    display: grid;
+    /* space the top small*/
+    margin-top: 2rem;
+    grid-template-columns: repeat(4, 6rem);
+    /* we're seting the miniume hight to 7rem and the 'auto' makes it expand when the page gets bigger */
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+
+    /* center it */
+    justify-content: center;
+}
+
+.calculator_grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator_grid>button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.calculator_grid>button:active {
+    background-color: rgba(255, 255, 255, .49);
+    color: white;
+}
+
+/* This makes it expands to two colums, instand of one colume */
+.span_two {
+    grid-column: span 2;
+}
+
+/* AC BUTTON */
+.calculator_grid>button.span_two_AC {
+    grid-column: span 2;
+    color: white;
+    background-color: rgba(245, 73, 73, .87);
+    font-weight: bold;
+}
+.calculator_grid>button.span_two_AC:hover {
+    background-color: rgba(250, 89, 89, 0.87);
+}
+.calculator_grid>button.span_two_AC:active {
+    background-color: rgba(238, 18, 18, 0.87);
+}
+
+/* DEL BUTTON */
+.calculator_grid>button#del_button {
+    color: white;
+    background-color: rgba(61, 46, 46, .87);
+    font-weight: bold;
+}
+.calculator_grid>button#del_button:hover {
+    background-color: rgba(82, 64, 64, 0.87);
+}
+.calculator_grid>button#del_button:active {
+    background-color: rgba(44, 33, 33, 0.87);
+}
+
+/* '=' BUTTON */
+.calculator_grid>button.span_two_equal {
+    grid-column: span 2;
+    color: white;
+    background-color: rgba(37, 18, 104, 0.87);
+    font-weight: bold;
+}
+.calculator_grid>button.span_two_equal:hover {
+    background-color: rgba(49, 28, 122, 0.87);
+}
+.calculator_grid>button.span_two_equal:active {
+    background-color: rgba(16, 8, 46, 0.87);
+}
+
+/* This makes it expand to full top colume from 1 to -1 */
+.output {
+    grid-column: 1 / -1;
+    /* black baclground with small transpirency*/
+    background-color: rgba(0, 0, 0, .75);
+    /* for text to be put in */
+    display: flex;
+    /*we want it to apprear vertically */
+    flex-direction: column;
+    /* we want it to apprear end of column */
+    align-items: flex-end;
+
+    /* we want space around each item */
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* white and small transpirancy */
+.output .previous_operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current_operand {
+    color: white;
+    font-size: 2.5rem;
+}
