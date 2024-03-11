@@ -113,3 +113,34 @@ body {
     color: white;
     font-size: 2.5rem;
 }
+
+
+/*  */
+@media screen and (max-width: 500px) {
+    .calculator_grid {
+        grid-template-columns: repeat(4, 3.7rem);
+        /* we're seting the miniume hight to 5rem and the 'auto' makes it expand when the page gets bigger */
+        grid-template-rows: minmax(5rem, auto) repeat(5, 3.7rem);
+    }
+    .calculator_grid>button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.52rem;
+    }
+    .calculator_grid>button.span_two_AC {
+        width: 120px;
+        font-size: 1.6rem;
+    }
+    .calculator_grid>button#del_button {
+        font-size: 1.4rem;
+    }
+    .calculator_grid>button.span_two_equal {
+        width: 120px;
+    }
+    .output .previous_operand {
+        font-size: 1rem;
+    }
+    .output .current_operand {
+        font-size: 2rem;
+    }
+}
