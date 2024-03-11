@@ -135,7 +135,6 @@ body {
     .calculator_grid>button#del_button {
         font-size: 1.1rem;
         font-weight: lighter;
-        color: rgb(255, 255, 255);
         text-align: center;
     }
     .calculator_grid>button.span_two_equal {
