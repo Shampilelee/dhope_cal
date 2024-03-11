@@ -126,13 +126,17 @@ body {
         width: 60px;
         height: 60px;
         font-size: 1.52rem;
+        color: black;
     }
     .calculator_grid>button.span_two_AC {
         width: 120px;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     .calculator_grid>button#del_button {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
+        font-weight: lighter;
+        color: rgb(255, 255, 255);
+        text-align: center;
     }
     .calculator_grid>button.span_two_equal {
         width: 120px;
